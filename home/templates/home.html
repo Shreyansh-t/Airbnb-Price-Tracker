@@ -1,0 +1,45 @@
+{%extends 'base.html'%}
+{%block content%}
+
+
+    <div class="hero-section text-center py-5 bg-image">
+        <div class="container">
+            <h1 class="display-4 mb-3 animate__animated animate__fadeInDown">Track Your Airbnb</h1>
+            <p class="lead mb-4 animate__animated animate__fadeInUp">Track your favorite Airbnbs worldwide and discover new savings.</p>
+            <a class="btn btn-primary btn-lg animate__animated animate__pulse" href="{% url 'home:register' %}">Get Started</a>
+        </div>
+    </div>
+    
+    <div class="container features-section py-5">
+        <div class="row">
+            <div class="col-md-4 feature-card">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="bi bi-graph-up display-4 text-primary mb-3"></i>
+                        <h3 class="card-title">Track Price</h3>
+                        <p class="card-text">Monitor different properties for up to 20 days</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 feature-card">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="bi bi-calendar-check display-4 text-primary mb-3"></i>
+                        <h3 class="card-title">Price Drop Alerts</h3>
+                        <p class="card-text">Get notified when there is a drop in price</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 feature-card">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="bi bi-cash-coin display-4 text-primary mb-3"></i>
+                        <h3 class="card-title">API For Developers</h3>
+                        <p class="card-text">Build ML Models with our scalable data API</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    {%endblock%}

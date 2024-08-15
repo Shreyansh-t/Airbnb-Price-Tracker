@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container mt-4">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        {% for title, desc, price in page_obj %}
+        <div class="col">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">{{ title }}</h5>
+                    <p class="card-text">Description: {{ desc }}</p>
+                    <p class="card-text"><strong>Price: {{ price }}</strong></p>
+                    <form method="POST">
+                        {% csrf_token %}
+                        <input type="hidden" name="title" value="{{ title }}">
+                        <input type="hidden" name="desc" value="{{ desc }}">
+                        <input type="hidden" name="price" value="{{ price }}">
+                        <button class="btn btn-primary" type="submit">Start Tracking</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+{% endblock %}
